@@ -5,71 +5,170 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Brittney's Full Stack Work</title>
-    <link rel="stylesheet" href="reset.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="custom-styles.css">
 
     <style>
-        .main-body-content {
-            padding: 5% 30%;
-        }
-
-        .main-body-content p {
-            font-size: 17px;
-            line-height: 1.6em;
-            margin-bottom: 20px;
-        }
-
-        h1 {
-            color: rgb(92, 13, 33);
-            font-size: 32px;
-            font-weight: bold;
-            margin: 25px 10px;
-        }
-
-        h2 {
-            font-size: 36px;
-            font-weight: bold;
-            color: #000000;
-            margin-bottom: 30px;
-        }
-
-        .set-relative-div {
-            position: relative;
-            padding-top: 20px;
-            padding-bottom: 110px;
-            background-color: #eeeeee;
-            margin-bottom: 20px;
-        }
-
-        .set-relative-div p {
-            font-size: 22px;
-            text-align: center;
-            line-height: 1.1em;
-            margin-bottom: 0px; 
-        }
-
-        .set-fixed-div {
-            position: fixed;
-            top: 80px;
-            left: 10px;
-            background-color: #eeeeee;
-            color: #000000;
-            padding: 40px;
-        }
-
-        .set-absolute-div {
-            position: absolute;
-            bottom: 0px;
-            right: -30px;
-            padding: 20px 40px;
-            background-color: #999999;
-        }
 
     </style>
 
 </head>
 
 <body>
-    <h1>Brittney's Homework 1</h1>
+
+    <header class="p-3">
+        <div class="container">
+            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+                    <img class="re-logo" src="images/RE-Logo.png">
+                </a>
+
+                <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                    <li><a href="#" class="nav-link px-2 text-secondary">Home</a></li>
+                    <li><a href="#" class="nav-link px-2">Features</a></li>
+                    <li><a href="#" class="nav-link px-2">Pricing</a></li>
+                    <li><a href="#" class="nav-link px-2">FAQs</a></li>
+                    <li><a href="#" class="nav-link px-2">About</a></li>
+                </ul>
+
+                <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+                    <input type="search" class="form-control form-control-dark text-bg-light" placeholder="Search..."
+                        aria-label="Search">
+                </form>
+
+                <div class="text-end">
+                    <button type="button" class="btn me-2">Login</button>
+                    <button type="button" class="btn btn-warning">Sign-up</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+
+    <div class="container col-xxl-8 px-5 py-5 hero-banner-section">
+        <div class="row">
+            <div class="col-lg-6">
+                <h1 class="display-5 fw-bold lh-1 mb-3">Your Personalized Digital Recipe Box</h1>
+                <p class="lead">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s
+                    most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid
+                    system, extensive prebuilt components, and powerful JavaScript plugins.</p>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                    <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Create Account</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container px-4 py-5" id="custom-cards">
+        <h2 class="pb-2 h2-centered-titles border-bottom">Browse Popular Categories</h2>
+
+        <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
+            <div class="col">
+                <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
+                    style="background-image: url('images/entree-feature-photo.jpg');">
+                    <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                        <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold"><a href="#">Entrees</a></h3>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
+                    style="background-image: url('images/dessert-feature-photo.jpg');">
+                    <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                        <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold"><a href="#">Desserts</a>
+                        </h3>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
+                    style="background-image: url('images/breakfast-feature-photo.jpg');">
+                    <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
+                        <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold"><a href="#">Breakfast</a></h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!---->
+    <div class="container marketing">
+
+        <div class="row h2-centered-titles pb-2 border-bottom">
+            <div class="col-12">
+                <h2> Recently Added Recipes</h2>
+            </div>
+
+        </div>
+
+        <div class="row featurette d-flex align-items-center">
+            <div class="col-md-7">
+                <h2 class="featurette-heading fw-normal lh-1">Salmon & Zucchini Dinner</h2>
+                <p class="lead">Are you ready for a dinner that is seriously easy and is so good that it will make you
+                    go weak in the knees? Just wait until you try this Blackened Salmon with Zucchini. The preparation
+                    couldn’t be more simple, yet the results are absolutely stunning. It’s the perfect example of how
+                    food doesn’t have to be complicated to be good. </p>
+                    <p>Preview of Ingredients</p>
+                <ul>
+                    <li>1.3 lbs. salmon ($10.65)</li>
+                    <li>2 Tbsp butter ($0.26)</li>
+                    <li>1 Tbsp cooking oil ($0.04)</li>
+                    <li>.3 lbs. zucchini ($1.79)</li>
+                </ul>
+                <a href="https://www.budgetbytes.com/blackened-salmon-with-zucchini/" target="_blank">View Full
+                    Recipe</a>
+            </div>
+            <div class="col-md-5 recipe-images">
+                <img width="100%" height="100%" src="images/salmon-and-zucchini-dinner.jpg"
+                    alt="Salmon & Zucchini Dinner">
+            </div>
+        </div>
+
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette d-flex align-items-center">
+            <div class="col-md-7 order-md-2">
+                <h2 class="featurette-heading fw-normal lh-1">Dark Chocolate Dream Cake</h2>
+                <p class="lead">This is the Dark Chocolate Cake of my DREAMS! Tender,
+                    moist homemade chocolate cake with the best smooth, rich, dark chocolate frosting.
+                    I go crazy for all things dark chocolate and there’s nothing more tempting to me than
+                    this Dark Chocolate Cake. Between the amazing, flavorful and tender homemade cake and the rich,
+                    smooth and fluffy dark chocolate frosting, there is SO much to love about this cake!</p>
+                    <p>Preview of Ingredients</p>
+                <ul>
+                    <li>3 cups all-purpose flour</li>
+                    <li>3 cups granulated sugar</li>
+                    <li>1 cup + 2 Tablespoon unsweetened cocoa powder</li>
+                    <li>3 teaspoons baking powder</li>
+                </ul>
+
+                <a href="https://tastesbetterfromscratch.com/dark-chocolate-cake/" target="_blank">View Full Recipe</a>
+            </div>
+            <div class="col-md-5 order-md-1 recipe-images">
+                <img width="100%" height="100%" src="images/dark-chocolate-dream-cake.jpg"
+                    alt="Dark Chocolate Dream Cake">
+            </div>
+        </div>
+
+    </div>
+    <div class="container footer-container">
+        <div class="row">
+            <footer class="py-3 my-2">
+                <p class="text-center text-body-secondary mb-0">© 2023 Company, Inc</p>
+            </footer>
+        </div>
+    </div>
+
+    <!--
+    <h1>Brittney's Homework 2</h1>
 
     <div class="main-body-content">
 
@@ -114,6 +213,12 @@
             non quam lacus. Eget egestas purus viverra accumsan in nisl. Dolor magna eget est lorem ipsum dolor sit.
         </p>
     </div>
+
+    -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
 
 </body>
 
