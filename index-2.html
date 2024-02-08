@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework 3</title>
+</head>
+
+<body>
+
+    <h1>Homework 3</h1>
+
+    <h2>Your Hero Stats:</h2>
+
+    <ul>
+        <li id="nameLabel"><b>Name: </b><span id="nameData"></span></li>
+        <li id="typeLabel"><b>Type: </b><span id="typeData"></span></li>
+        <li id="levelLabel"><b>Level: </b><span id="levelData"></span></li>
+        <li id="healthLabel"><b>Health: </b><span id="healthData"></span></li>
+    </ul>
+
+
+    <script type="text/javascript">
+
+
+        /* --------------------- GLOBAL VARIABLES  --------------------- */
+
+        var heroStats = {
+            // empty object that will populate with data as the user enters it 
+        }
+
+        var characterTypes = ["Wizard", "Monk", "Druid", "Assassin"];
+
+
+
+        /* --------------------- FUNCTIONS & LOGIC --------------------- */
+
+        function heroNamePrompt() {
+
+            // prompts question about hero name 
+            var heroNameAnswer = prompt("What is your hero name?");
+
+            // adds name property as well as answer from the prompt into the object 
+            heroStats.name = heroNameAnswer;
+
+        }
+
+
+        function heroTypePrompt() {
+
+            // prompts the user to enter their character type 
+            var heroTypeAnswer = prompt("Which are you? A Wizard (1), Monk(2), Druid(3), or Assassin(4)");
+
+            /* ---- the if and else if statements below gains the user's answer from the prompt, assigns it the correct value 
+            based on the characterTypes array (via index), and then adds the type property and value to the object  ---- */
+
+            if (heroTypeAnswer === "1") {
+                heroStats.type = characterTypes[0];
+            }
+
+            else if (heroTypeAnswer === "2") {
+                heroStats.type = characterTypes[1];
+            }
+
+            else if (heroTypeAnswer === "3") {
+                heroStats.type = characterTypes[2];
+            }
+
+            else if (heroTypeAnswer === "4") {
+                heroStats.type = characterTypes[3];
+            }
+
+            // this runs if anything other than a 1, 2, 3, or 4 is entered (to validate a correct answer)
+            else {
+                // an alert will inform of an invalid entry 
+                alert("That is not a valid entry. Please enter a number from 1 - 4.");
+
+                // this recalls the main function so the prompt and validation continues to occur until a valid answer is submitted
+                heroTypePrompt();
+            }
+        }
+
+
+
+        function heroLevelPrompt() {
+
+            // prompts question about hero level 
+            var heroLevelAnswer = prompt("What level are you? (1-99)");
+
+            // validates that only numbers through 1 -99 are submitted, then adds level as a property and assigns the value to the object
+            if (heroLevelAnswer > 0 && heroLevelAnswer < 100) {
+                heroStats.level = heroLevelAnswer;
+            }
+
+            else {
+                // if anything else is entered, alert informs invalid answer 
+                alert("That is not a valid entry. Please enter a number from 1 - 99.");
+
+                // this recalls the main function so the prompt and validation continues to occur until a valid answer is submitted
+                heroLevelPrompt();
+            }
+
+        }
+
+
+        function heroHealthCalculation() {
+            // creates variable that takes the hero level and multiplies it by 10 to establish the characters health 
+            var calculateHeroHealth = heroStats.level * 10
+
+            // adds health property as well as answer from the prompt into the object 
+            heroStats.health = calculateHeroHealth;
+        }
+
+    
+
+        /* --------------------- CALL FUNCTIONS HERE --------------------- */
+
+        // calls the function to get the hero name and add it to the object 
+        heroNamePrompt();
+
+        // calls the function that gets the hero type and validates that only a 1, 2, 3, or 4 is entered.
+        // Once a valid entry is submitted, this function assigns it's value based on the characterTypes array and then adds it to the object
+        heroTypePrompt();
+
+        // calls the function that gets the level entered and validates that it is a number between 1 and 99
+        // Once a valid entry is submitted, this function assigns it's value based on the characterLevel array and then adds it to the object
+        heroLevelPrompt();
+
+        // this function takes the hero's level and multiplies it by 10 to get the health and adds it to the object
+        heroHealthCalculation();
+
+
+        // these push the data from the object into the HTML so it is visible on the DOM
+        document.getElementById("nameData").textContent = heroStats.name; 
+        document.getElementById("typeData").textContent = heroStats.type;
+        document.getElementById("levelData").textContent = heroStats.level;
+        document.getElementById("healthData").textContent = heroStats.health; 
+
+
+    </script>
+
+</body>
+
+</html>

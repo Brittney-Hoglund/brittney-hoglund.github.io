@@ -1,0 +1,131 @@
+/* custom styles */
+
+a {
+	color: #e6517e; 
+}
+
+a:hover {
+	color: #000000; 
+}
+
+.btn-primary, 
+.btn-warning  {
+	background-color: #e6517e !important; 
+	border: 0px !important; 
+	color: #000000; 
+}
+
+.btn-primary:hover {
+	background-color: #ffffff !important; 
+	color: #000000 !important; 
+	border: 0px !important; 
+}
+
+.btn-warning:hover {
+	background-color: #000000 !important; 
+	color: #ffffff; 
+}
+
+a.nav-link {
+	color: #e6517e; 
+}
+
+a.nav-link:hover {
+	color: #000000; 
+}
+
+.re-logo {
+	max-width: 220px;
+	margin-right: 20px;
+}
+
+.main-navigation-section {
+	background-color: #d5d5d5;
+	max-width: 100%;
+	padding: 5px;
+}
+
+.hero-banner-section {
+	background-image: url('images/banner-cupcake-photo.jpg');
+	background-size: cover;
+	background-position: center top 30%;
+	max-width: 100%;
+	width: 100%;
+	height: 90vh;
+	display: flex;
+	align-items: center;
+}
+
+h1 {
+	color: #ffffff;
+}
+
+.hero-banner-section p {
+	color: #ffffff;
+}
+
+.card.card-cover {
+	background-size: cover;
+	background-position: center;
+}
+
+.card-cover .d-flex {
+	justify-content: end;
+	height: 300px !important;
+}
+
+.card-cover a {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+.card-cover a:hover {
+	text-decoration: underline;
+}
+
+.h2-centered-titles {
+	text-align: center;
+}
+
+.featurette {
+	padding: 5% 0px;
+}
+
+@media (max-width: 768px) {
+	.card-cover .d-flex {
+		height: 180px !important;
+	}
+}
+
+.bd-placeholder-img {
+	font-size: 1.125rem;
+	text-anchor: middle;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
+}
+
+@media (min-width: 768px) {
+	.bd-placeholder-img-lg {
+		font-size: 3.5rem;
+	}
+}
+
+.footer-container {
+	background-color: #eeeeee; 
+	max-width: 100%; 
+}
+
+@media (max-width: 980px) {
+	.recipe-images {
+		 padding-top: 30px; 
+	}
+
+	.hero-banner-section {
+		background-image:
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+    url('images/banner-cupcake-photo.jpg');
+		background-position: center right 10%; 
+		height: 70vh; 
+	}
+}
